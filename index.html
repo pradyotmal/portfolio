@@ -1,0 +1,944 @@
+<!-- =========================================================
+     index.html
+========================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monami Mal | Portfolio</title>
+
+    <!-- =========================
+         STYLE.CSS CODE
+    ========================== -->
+
+    <style>
+
+    /* =========================
+       RESET
+    ========================== */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #faf4ec;
+        color: #263f3b;
+        line-height: 1.6;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    /* =========================
+       HEADER / NAVBAR
+    ========================== */
+
+    header {
+        width: 100%;
+        height: 90px;
+        background: #103b36;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4.2%;
+    }
+
+    .logo {
+        font-size: 21px;
+        font-weight: 400;
+        color: #ffffff;
+        letter-spacing: 0.3px;
+    }
+
+    .logo span {
+        color: #d9795e;
+    }
+
+    nav {
+        display: flex;
+        gap: 58px;
+        align-items: center;
+    }
+
+    nav a {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 400;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #d9795e;
+    }
+
+    /* =========================
+       COMMON SECTION
+    ========================== */
+
+    section {
+        min-height: calc(100vh - 90px);
+        padding: 45px 7%;
+    }
+
+    /* =========================
+       HOME
+    ========================== */
+
+    #home {
+        background: #faf4ec;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 38px;
+    }
+
+    .home-content {
+        width: 58%;
+    }
+
+    .small-title {
+        color: #327d78;
+        font-size: 14px;
+        margin-bottom: 0;
+        letter-spacing: 0.2px;
+    }
+
+    .home-content h1 {
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 1.15;
+        color: #183f3a;
+        margin-top: 0;
+    }
+
+    .home-content h2 {
+        font-size: 42px;
+        font-weight: 400;
+        color: #d9795e;
+        margin: 5px 0 10px;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+        font-weight: 400;
+        color: #3d4948;
+        margin-bottom: 18px;
+    }
+
+    .home-content p {
+        color: #4e5554;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 242px;
+        height: 56px;
+        background: #117e78;
+        color: white;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #0c6661;
+    }
+
+    .home-image {
+        width: 34%;
+        display: flex;
+        justify-content: center;
+        padding-top: 25px;
+    }
+
+    .home-image img {
+        width: 285px;
+        height: 285px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 13px solid #df785d;
+        padding: 7px;
+        background: #faf4ec;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    #about {
+        background: #faf4ec;
+        padding-top: 48px;
+    }
+
+    .about-wrapper {
+        max-width: 650px;
+    }
+
+    .about-top {
+        color: #263f3b;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .journey {
+        color: #d89a87;
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+
+    .section-title {
+        font-size: 39px;
+        font-weight: 400;
+        color: #183f3a;
+        margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+        font-size: 17px;
+        color: #404847;
+        margin-bottom: 15px;
+    }
+
+    .about-wrapper p {
+        font-size: 14px;
+        color: #4f5554;
+        line-height: 1.7;
+        margin-bottom: 32px;
+    }
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    #skills {
+        background: #faf4ec;
+        padding-top: 18px;
+    }
+
+    .skills-title {
+        font-size: 36px;
+        font-weight: 400;
+        color: #183f3a;
+        margin-bottom: 3px;
+    }
+
+    .skills-subtitle {
+        font-size: 14px;
+        color: #555b59;
+        margin-bottom: 30px;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 240px);
+        gap: 28px 38px;
+    }
+
+    .skill-card {
+        background: #ffffff;
+        min-height: 210px;
+        padding: 18px;
+    }
+
+    .skill-image {
+        width: 100px;
+        height: 80px;
+        margin: 0 auto 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skill-image img {
+        width: 90px;
+        height: 75px;
+        object-fit: contain;
+    }
+
+    .skill-card h3 {
+        color: #327d8b;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+
+    .skill-card p {
+        color: #555b59;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================== */
+
+    #projects {
+        background: #edf3ff;
+        padding-top: 15px;
+    }
+
+    .projects-heading {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .projects-heading h2 {
+        font-size: 32px;
+        font-weight: 400;
+        color: #172f2d;
+        margin-bottom: 2px;
+    }
+
+    .projects-heading p {
+        font-size: 14px;
+        color: #555b59;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 44px;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        background: #ffffff;
+        border: 1px solid #cfd4da;
+        min-height: 525px;
+        padding: 14px 17px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 185px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .project-card h3 {
+        color: #327d8b;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .project-card p {
+        font-size: 11px;
+        color: #555b59;
+        line-height: 1.55;
+        max-width: 170px;
+        margin-bottom: 18px;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tags span {
+        background: #dcebf7;
+        color: #39758a;
+        font-size: 9px;
+        padding: 4px 10px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    #contact {
+        background: #ffe2c5;
+        min-height: calc(100vh - 90px);
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .contact-heading h2 {
+        font-size: 31px;
+        font-weight: 400;
+        color: #173c38;
+        margin-bottom: 2px;
+    }
+
+    .contact-heading p {
+        color: #327d78;
+        font-size: 15px;
+        margin-bottom: 35px;
+    }
+
+    .contact-form {
+        width: 72%;
+        max-width: 815px;
+        margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        border: 2px solid #d6c5b5;
+        background: #ffffff;
+        padding: 15px 20px;
+        margin-bottom: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        outline: none;
+    }
+
+    .contact-form input {
+        height: 46px;
+    }
+
+    .contact-form textarea {
+        height: 128px;
+        resize: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: #117e78;
+    }
+
+    .send-btn {
+        width: 242px;
+        height: 48px;
+        background: #000000;
+        color: #ffffff;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .send-btn:hover {
+        background: #333333;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+        background: #ffe2c5;
+        padding: 0 4.2% 20px;
+        text-align: center;
+    }
+
+    .footer-line {
+        width: 100%;
+        height: 1px;
+        background: #555555;
+        margin-bottom: 25px;
+    }
+
+    footer p {
+        color: #858585;
+        font-size: 14px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+        nav {
+            gap: 25px;
+        }
+
+        #home {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .home-content {
+            width: 100%;
+        }
+
+        .home-image {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .skills-grid {
+            grid-template-columns: repeat(2, 240px);
+            justify-content: center;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+            max-width: 400px;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        header {
+            height: auto;
+            padding: 20px;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        nav {
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        section {
+            padding: 35px 20px;
+        }
+
+        .home-content h1 {
+            font-size: 42px;
+        }
+
+        .home-content h2 {
+            font-size: 32px;
+        }
+
+        .home-content h3 {
+            font-size: 18px;
+        }
+
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .skill-card {
+            width: 100%;
+        }
+
+        .contact-form {
+            width: 100%;
+        }
+    }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            MONAMI <span>MAL</span>
+        </div>
+
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME SECTION
+    ========================== -->
+
+    <section id="home">
+
+        <div class="home-content">
+
+            <div class="small-title">
+                B.SC GEOGRAPHY · WEB DEVELOPMENT
+            </div>
+
+            <h1>Hello,</h1>
+
+            <h2>I'm Monami Mal</h2>
+
+            <h3>Geography Student &amp; Web Developer</h3>
+
+            <p>
+                I am interested in web development, technology and practical learning.<br>
+                I enjoy creating simple projects while developing my skills in HTML, CSS and JS.
+            </p>
+
+            <a href="#projects" class="btn">
+                VIEW PROJECTS
+            </a>
+
+        </div>
+
+
+        <div class="home-image">
+
+            <!-- Replace this image source with your actual image -->
+            <img src="profile.jpg" alt="Monami Mal">
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+
+    <section id="about">
+
+        <div class="about-wrapper">
+
+            <div class="about-top">
+                MY
+            </div>
+
+            <div class="journey">
+                JOURNEY
+            </div>
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="section-subtitle">
+                A little about me
+            </div>
+
+            <p>
+                I am a B.Sc Geography student with an interest in technology and web development.
+                Along with Geography, I am developing my skills in HTML, CSS and JavaScript.
+                My goal is to continue learning, build practical projects and explore opportunities
+                where I can combine Geography with technology.
+            </p>
+
+            <a href="#contact" class="btn">
+                CONTACT ME
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================== -->
+
+    <section id="skills">
+
+        <h2 class="skills-title">
+            My Skills
+        </h2>
+
+        <p class="skills-subtitle">
+            Technologies I am learning and working with
+        </p>
+
+
+        <div class="skills-grid">
+
+
+            <!-- HTML -->
+
+            <div class="skill-card">
+
+                <div class="skill-image">
+                    <img src="html.png" alt="HTML">
+                </div>
+
+                <h3>HTML</h3>
+
+                <p>
+                    Building the structure and
+                    content of web pages.
+                </p>
+
+            </div>
+
+
+            <!-- CSS -->
+
+            <div class="skill-card">
+
+                <div class="skill-image">
+                    <img src="css.png" alt="CSS">
+                </div>
+
+                <h3>CSS</h3>
+
+                <p>
+                    Designing and styling
+                    responsive web pages.
+                </p>
+
+            </div>
+
+
+            <!-- JAVASCRIPT -->
+
+            <div class="skill-card">
+
+                <div class="skill-image">
+                    <img src="javascript.png" alt="JavaScript">
+                </div>
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Adding interaction and
+                    functionality to websites.
+                </p>
+
+            </div>
+
+
+            <!-- C -->
+
+            <div class="skill-card">
+
+                <div class="skill-image">
+                    <img src="c.png" alt="C Language">
+                </div>
+
+                <h3>C language</h3>
+
+                <p>
+                    Learning object-oriented
+                    programming and problem
+                    solving.
+                </p>
+
+            </div>
+
+
+            <!-- C++ -->
+
+            <div class="skill-card">
+
+                <div class="skill-image">
+                    <img src="cpp.png" alt="C++">
+                </div>
+
+                <h3>C++</h3>
+
+                <p>
+                    Learning object-oriented
+                    programming and problem
+                    solving.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS SECTION
+    ========================== -->
+
+    <section id="projects">
+
+        <div class="projects-heading">
+
+            <h2>
+                My Projects
+            </h2>
+
+            <p>
+                Web Development Projects
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img src="portfolio.png" alt="Personal Portfolio">
+                </div>
+
+                <h3>
+                    Personal Portfolio
+                </h3>
+
+                <p>
+                    A personal portfolio website
+                    created using HTML, CSS and
+                    JavaScript.
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img src="weather.png" alt="Weather App">
+                </div>
+
+                <h3>
+                    Weather App
+                </h3>
+
+                <p>
+                    A simple weather application
+                    that displays weather information
+                    using a weather API.
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img src="temple-run.png" alt="Temple Run Game">
+                </div>
+
+                <h3>
+                    Temple Run Game
+                </h3>
+
+                <p>
+                    A simple browser-based
+                    Snake Game developed
+                    using HTML, CSS and
+                    JavaScript.
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="contact-heading">
+
+            <h2>
+                Contact Me
+            </h2>
+
+            <p>
+                Feel free to send me a message
+            </p>
+
+        </div>
+
+
+        <form class="contact-form">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                class="send-btn"
+            >
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-line"></div>
+
+        <p>
+            © 2026 Monami Mal | All Rights Reserved |
+        </p>
+
+    </footer>
+
+
+</body>
+  </html>
